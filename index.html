@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>HIGH-END CITY — Open World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="hud">
+      <div class="topbar">
+        <div id="clock" class="pill">12:00</div>
+        <div id="biome" class="pill big">DOWNTOWN</div>
+        <div id="wanted">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span
+          ><span class="star">&#9733;</span><span class="star">&#9733;</span
+          ><span class="star">&#9733;</span>
+        </div>
+      </div>
+
+      <div id="help" class="glass">
+        <div class="help-title">CONTROLS</div>
+        <b>GROUND</b> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> drive
+        &middot; <kbd>Space</kbd> brake<br />
+        <b>HELI</b> <kbd>W</kbd>/<kbd>S</kbd> fly &middot; <kbd>A</kbd>/<kbd
+          >D</kbd
+        >
+        turn &middot; <kbd>Space</kbd> up &middot; <kbd>Shift</kbd> down<br />
+        <b>VIEW</b> <kbd>C</kbd>
+        <span class="dim">(chase / far / top / hood / cockpit)</span><br />
+        <b>GARAGE</b> <kbd>V</kbd> &middot; <b>LOOK</b> <kbd>Q</kbd
+        ><kbd>E</kbd> &middot; <b>RESET</b> <kbd>R</kbd> &middot; <b>HORN</b>
+        <kbd>H</kbd><br />
+        <span class="dim">On phone: use the on-screen buttons</span>
+      </div>
+
+      <div class="mini-wrap">
+        <span class="compass n">N</span>
+        <canvas id="minimap" width="190" height="190"></canvas>
+        <span class="mini-ring"></span>
+      </div>
+
+      <div class="gauge">
+        <canvas id="speedo" width="150" height="150"></canvas>
+        <div id="speedText">
+          <span class="num">0</span><span class="unit">KM/H</span>
+        </div>
+        <div id="gear">D</div>
+      </div>
+
+      <div id="banner"></div>
+    </div>
+
+    <div id="loader">
+      <div class="grid-bg"></div>
+      <div class="loader-inner">
+        <h1 data-text="HIGH-END CITY">HIGH-END CITY</h1>
+        <div class="sub">CHOOSE YOUR RIDE</div>
+        <div id="bar"><div id="barFill"></div></div>
+        <div id="garage"></div>
+        <button id="startBtn">ENTER THE CITY</button>
+      </div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
